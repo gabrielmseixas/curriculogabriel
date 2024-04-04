@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome para ícones -->
+    <style>
+        /* Estilos básicos para a página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 32px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 10px;
+            text-align: left;
+            color: #555;
+        }
+        th {
+            background: linear-gradient(to right, #f9f9f9, #eaeaea);
+            color: #333;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        .total {
+            text-align: right;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: bold;
+        }
+        .checkout-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-btn:hover {
+            background-color: #45a049;
+        }
+        .checkout-btn:active {
+            transform: translateY(2px);
+        }
+        .fa-shopping-cart {
+            margin-right: 5px;
+        }
+        .quantity-input {
+            width: 50px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 0 10px;
+            outline: none;
+        }
+        .coupon-input {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .btn-remove {
+            background-color: #ff6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-remove:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-shopping-cart"></i>Carrinho de Compras</h1>
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry Potter e a Pedra Filosofal</td>
+                    <td>R$ 29,90</td>
+                    <td><input type="number" class="quantity-input" value="1" min="1"></td>
+                    <td>R$ 29,90</td>
+                    <td><button class="btn-remove">Remover</button></td>
+                </tr>
+                <tr>
+                    <td>O Senhor dos Anéis: A Sociedade do Anel</td>
+                    <td>R$ 35,50</td>
+                    <td><input type="number" class="quantity-input" value="2" min="1"></td>
+                    <td>R$ 71,00</td>
+                    <td><button class="btn-remove">Remover</button></td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+        <input type="text" class="coupon-input" placeholder="Cupom de Desconto">
+        <div class="total">
+            <strong>Total:</strong> R$ <span id="total-amount">100,40</span>
+        </div>
+        <a href="finalizarcompra.html" class="checkout-btn"><i class="fas fa-shopping-cart"></i>Finalizar Compra</a>
+    </div>
+</body>
+</html>

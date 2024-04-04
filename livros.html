@@ -1,0 +1,249 @@
+<style>
+    /* Reset CSS */
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        background-image: url(https://img.freepik.com/fotos-gratis/closeup-de-livros-bem-organizados-nas-prateleiras-da-livraria_181624-59731.jpg); /* Substitua 'background.jpg' pelo caminho da sua imagem de fundo */
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    header {
+        background-color: #3b2202;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+        background-color: #533002;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    nav a {
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        color: #0c0c0c;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        background-color: #665c04;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .book {
+        background-color: #ecd475;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        width: calc(25% - 20px); /* 25% - margem */
+    }
+
+    .book:hover {
+        transform: translateY(-5px);
+    }
+
+    .book img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .book h2 {
+        margin-top: 0;
+        color: #333;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .book p {
+        color: #666;
+        font-size: 1rem;
+    }
+
+    header h1 {
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .btn {
+        background-color: #f0dc7c;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+        font-weight: bold;
+    }
+
+    .section {
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #2c3e50;
+    }
+
+    .section-content {
+        max-width: 800px;
+        margin: 0 auto;
+        color: #666;
+    }
+
+    .icon {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+</style>
+</head>
+<body>
+    <nav>
+        <a href="inicío.html" class="btn">inicío</a>
+        <a href="login.html" class="btn">login</a>
+        <a href="autores.html" class="btn">Autores</a>
+        <a href="sobre.html" class="btn">Sobre</a>
+        <a href="contato.html" class="btn">Contato</a>
+        <a href="pagamento.html" class="btn">Pagamento</a>
+    </nav>
+<div class="container">
+<div class="book">
+    <center><h2>Diario de um Banana toque do queijo </h2></center>
+    <img src="diario.jpg" alt="">
+    <input type="file" id="diario2" accept="image/*" onchange="previewImage(event, 'diario2')">
+    <img id="diario2" src="#" alt="diario2" style="display: none;">
+    <p><strong>Valor:</strong> R$ 85,00</p>
+</div>
+<div class="book">
+    <center><h2>Pequeno Príncipeㅤㅤㅤㅤㅤㅤㅤ</h2></center>
+    <img src="imgpequeno2.webp" alt="">
+    <input type="file" id="livro2Img" accept="image/*" onchange="previewImage(event, 'livro2Preview')">
+    <img id="livro2Preview" src="#" alt="Imagem do Livro 2" style="display: none;">
+    </p>
+    <p><strong>Valor:</strong> R$ 85,00</p>
+
+</div>
+<div class="book">
+    <center><h2>Harry Poter e a Pedra fisolofal </h2></center>
+    <img src="imgharry (1).jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 215,00</p>
+  
+</div>
+<div class="book">
+    <center><h2> invocadores do mal ㅤㅤㅤㅤㅤ </h2></center>
+    <img src="aluno 4.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 25,00</p>
+    
+</div>
+<div class="book">
+    <center><h2>Divertidamente ㅤㅤㅤㅤㅤ </h2></center>
+    <img src="imgdivertidamente.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 65,00</p>
+    
+</div>
+<div class="book">
+    <center><h2> A Garota do Lagoㅤㅤㅤㅤㅤ </h2></center>
+    <img src="aluno 3.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 105,00</p>
+   
+</div>
+<div class="book">
+    <center><h2>O Menino Maluquinho ㅤㅤㅤㅤㅤ </h2></center>
+    <img src="aluno 2.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 28,00</p>
+   
+</div>
+<div class="book">
+    <center><h2>O menino do Pijama listrado ㅤㅤㅤㅤㅤ </h2></center>
+    <img src="aluno  1.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 65,00</p>
+
+</div>
+<div class="book">
+    <center><h2> A Luta </h2></center>
+    <img src="aluno 5.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 95,00</p>
+   
+</div>
+<div class="book">
+    <center><h2> Nascido Para Correr </h2></center>
+    <img src="aluno 6.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 75,00</p>
+  
+</div>
+<div class="book">
+    <center><h2> Aytor Senna </h2></center>
+    <img src="aluno 7.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 58,00</p>
+</div>
+<div class="book">
+    <center><h2> O Alquimista </h2></center>
+    <img src="aluno 8.jpg" alt="">
+    <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+    <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+    <p><strong>Valor:</strong> R$ 97,00</p>
+</div>

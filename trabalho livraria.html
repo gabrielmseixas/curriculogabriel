@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLivros</title>
+    <style>
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-image: url(https://img.freepik.com/fotos-gratis/closeup-de-livros-bem-organizados-nas-prateleiras-da-livraria_181624-59731.jpg); 
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #3b2202;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            background-color: #533002;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #0c0c0c;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #665c04;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            background-color: #ecd475;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            width: calc(25% - 20px); /* 25% - margem */
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .book h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .book p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        header h1 {
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .btn {
+            background-color: #f0dc7c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            cursor: pointer;
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    function search() {
+        var input, filter, books, bookContainer, title, author, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        books = document.getElementsByClassName('book');
+        for (i = 0; i < books.length; i++) {
+            title = books[i].getElementsByTagName("h2")[0];
+            author = books[i].getElementsByTagName("p")[0];
+            if (title || author) {
+                txtValueTitle = title.textContent || title.innerText;
+                txtValueAuthor = author.textContent || author.innerText;
+                if (txtValueTitle.toUpperCase().indexOf(filter) > -1 || txtValueAuthor.toUpperCase().indexOf(filter) > -1) {
+                    books[i].style.display = "";
+                } else {
+                    books[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+
+<header>
+    <h1>Bem-Vindo à UniLivros</h1>
+</header>
+<nav>
+    <a href="inicio.html" class="btn">inicío</a>
+    <a href="login.html" class="btn">login</a>
+    <a href="livros.html" class="btn">Livros</a>
+    <a href="autores.html" class="btn">Autores</a>
+    <a href="sobre.html" class="btn">Sobre</a>
+    <a href="contato.html" class="btn">Contato</a>
+    <a href="pagamento.html" class="btn">Pagamento</a>
+    
+</nav>
+<div class="container">
+    <div class="book">
+        <h2>Diario de um Banana toque do queijo </h2>
+        <img src="imgdiario2 (1).jpg" alt="">
+        <input type="file" id="diario2" accept="image/*" onchange="previewImage(event, 'diario2')">
+        <img id="diario2" src="#" alt="diario2" style="display: none;">
+        <p>
+            Mergulhe na hilária jornada de Greg Heffley em busca de popularidade.
+            Descubra as trapalhadas, o queijo mofado e as lições aprendidas em "Diário de um Banana: Toque do Queijo".
+            Compre agora e gargalhe com essa leitura contagiante!
+        </p>
+        <p><strong>Valor:</strong> R$ 85,00</p>
+    </div>
+    <div class="book">
+        <center><h2>Pequeno Príncipeㅤㅤㅤㅤㅤㅤㅤ</h2></center>
+        <img src="imgpequenoo.webp" alt="">
+        <input type="file" id="livro2Img" accept="image/*" onchange="previewImage(event, 'livro2Preview')">
+        <img id="livro2Preview" src="#" alt="Imagem do Livro 2" style="display: none;">
+        <p>
+            Descubra a magia do Pequeno Príncipe!
+            Junte-se a um príncipe em miniatura em sua jornada pelas estrelas.
+            Encontre personagens excêntricos e aprenda lições valiosas sobre a vida, a amizade e o amor.
+            Um clássico atemporal que te fará rir, chorar e pensar.
+        </p>
+        <p><strong>Valor:</strong> R$ 85,00</p>
+    </div>
+    <div class="book">
+        <h2>Harry Poter e a Pedra fisolofal </h2>
+        <img src="imgharry.jpg" alt="">
+        <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+        <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+        <p>
+            Harry Potter: Órfão vira bruxo, enfrenta Voldemort e salva a Pedra Filosofal.
+            Magia, amizade e aventura te esperam em Hogwarts!
+        </p>
+        <p><strong>Valor:</strong> R$ 215,00</p>
+    </div>
+    <div class="book">
+        <center><h2>Divertidamente ㅤㅤㅤㅤㅤ </h2></center>
+        <img src="imgdivertidamente.jpg" alt="">
+        <input type="file" id="livro3Img" accept="image/*" onchange="previewImage(event, 'livro3Preview')">
+        <img id="livro3Preview" src="#" alt="Imagem do Livro 3" style="display: none;">
+        <p>
+           
+Mergulhe na mente de Riley!
+Descubra como Alegria, Tristeza, Raiva, Medo e Nojinho controlam suas emoções. Uma aventura divertida e emocionante que te ensinará a importância de todas as suas emoções!
+
+Prepare-se para rir, chorar e se encantar com Divertida Mente!
+        </p>
+        <p><strong>Valor:</strong> R$ 65,00</p>
+    </div>

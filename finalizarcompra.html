@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome para ícones -->
+    <style>
+        /* Estilos básicos para a página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            font-size: 32px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        input[type="submit"]:active {
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-credit-card"></i>Pagamento</h1>
+        <form action="#">
+            <label for="card-name">Nome no Cartão</label>
+            <input type="text" id="card-name" name="card-name" required>
+            <label for="card-number">Número do Cartão</label>
+            <input type="number" id="card-number" name="card-number" required>
+            <label for="expiration">Data de Validade</label>
+            <input type="text" id="expiration" name="expiration" placeholder="MM/AA" required>
+            <label for="security-code">Código de Segurança</label>
+            <input type="number" id="security-code" name="security-code" required>
+            <input type="submit" value="Confirmar Pagamento">
+        </form>
+    </div>
+</body>
+</html>
